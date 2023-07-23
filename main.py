@@ -40,7 +40,7 @@ async def delete_account(account_id: int) -> Optional[bool]:
 
 
 @app.get("/healthz")
-async def get_health(request: Request) -> Union[Optional[Dict], HTTPException]:
+async def get_health(request: Request) -> Optional[dict]:
     return {"status": True}
 
 
