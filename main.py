@@ -39,7 +39,7 @@ async def delete_account(account_id: int) -> Optional[bool]:
     else:
         return None
 
-
+# I had to change the return type here from Union[Optional[Dict], HTTPException] to Optional[dict]
 @app.get("/healthz")
 async def get_health(request: Request) -> Optional[dict]:
     return {"status": True}

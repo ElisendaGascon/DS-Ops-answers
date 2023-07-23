@@ -40,9 +40,9 @@ def test_get_account_invalid_input_returns_422():
   response = requests.get(endpoint)
   assert response.status_code == 422
 
-def test_add_new_account_returns_200():
+def test_add_new_account_returns_201():
   endpoint = url + "/accounts/2"
-  payload ={
+  payload = {
   "name": "Account 2",
   "description": "This is account 2",
   "balance": 2000,
