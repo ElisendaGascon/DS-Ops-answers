@@ -125,3 +125,16 @@ Example response:
 | ---------- | ----------- |
 | 422 Unprocessable Entity | The type of the input is invalid. |
 | 404 Not Found | An account with this `account_id` doesn't exist. |
+
+
+## Running the application on a container (using Docker)
+
+To create an image, run the following command:
+```
+docker build -t accounts-api .
+```
+
+To create a local container to run the image locally on your machine, tun the following command:
+```
+docker run -d --name myaccountscontainer -p 8000:80 accounts-api
+```
