@@ -21,7 +21,7 @@ def test_get_existing_account_returns_200():
     "balance": 1000,
     "active": True
   }
-  requests.put(endpoint, json=payload)
+  requests.post(endpoint, json=payload)
 
   response = requests.get(endpoint)
   assert response.status_code == 200
@@ -44,7 +44,7 @@ def test_add_new_account_returns_201():
   "balance": 2000,
   "active": True
 }
-  response = requests.put(endpoint, json=payload)
+  response = requests.post(endpoint, json=payload)
   assert response.status_code == 201
 
 def test_add_existing_account_returns_409():
@@ -55,8 +55,8 @@ def test_add_existing_account_returns_409():
   "balance": 3000,
   "active": True
 }
-  requests.put(endpoint, json=payload)
-  response = requests.put(endpoint, json=payload)
+  requests.post(endpoint, json=payload)
+  response = requests.post(endpoint, json=payload)
   assert response.status_code == 409
 
 def test_delete_existing_account_returns_200():
@@ -67,7 +67,7 @@ def test_delete_existing_account_returns_200():
     "balance": 4000,
     "active": True
 }
-  requests.put(endpoint, json=payload)
+  requests.post(endpoint, json=payload)
 
   response = requests.delete(endpoint)
   assert response.status_code == 200

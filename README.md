@@ -69,7 +69,7 @@ Possible errors:
 | 422 Unprocessable Entity | The type of the input is invalid. |
 | 404 Not Found | An account with the specified id doesn't exist. |
 
-#### PUT
+#### POST
 
 Adds an account.
 ```
@@ -79,7 +79,7 @@ Where `account_id` is the account id.
 
 Example request:
 ```
-PUT /account/1
+POST /account/1
 {
   "name": "Account 1",
   "description": "This is account 1",

@@ -54,7 +54,7 @@ async def read_account(account_id: int):
         return res
 
 
-@app.put("/accounts/{account_id}", status_code=201)
+@app.post("/accounts/{account_id}", status_code=201)
 async def create_account(account_id: int, account: Account):
     res = await add_account(account_id, account)
     if res is None:
