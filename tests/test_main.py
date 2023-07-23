@@ -75,6 +75,9 @@ def test_delete_existing_account_returns_200():
 
   response = requests.delete(endpoint)
   assert response.status_code == 200
+
+  response = requests.get(endpoint)
+  assert response.status_code == 404
   
 def test_delete_non_existing_account_returns_404():
   endpoint = url + "/accounts/5"
