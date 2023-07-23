@@ -5,6 +5,7 @@ import requests
 ## I couldn't get this to work to start a session automatically... 
 # from main import app
 # client = TestClient(app)
+# although I don't need this when running on a local container
 
 url = "http://127.0.0.1:8000"
 
