@@ -2,12 +2,8 @@ from fastapi import FastAPI
 # from fastapi.testclient import TestClient
 import requests
 
-# I couldn't get this to work to start a session automatically...
-# import sys
-# import os
-# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) 
+## I couldn't get this to work to start a session automatically... 
 # from main import app
-
 # client = TestClient(app)
 
 url = "http://127.0.0.1:8000"
